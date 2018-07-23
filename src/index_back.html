@@ -2,13 +2,22 @@
 <html lang="zh-cmn-Hans">
 <head id="head">
     <meta charset="UTF-8">
-    <meta name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Title</title>
-    <style id="style"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>animate resume</title>
+
 </head>
 <body>
 <div class="container" id="container"></div>
+<pre>
+    <code>
+        <p class="line1">hellow,world</p>
+        <style>
+            .line1 {
+                color: red;
+            }
+        </style>
+    </code>
+</pre>
 <template id="tpl">
     <div class="hide-container">
         <p class="line1">hellow,world</p>
@@ -27,19 +36,24 @@
 </template>
 </body>
 <script src="scripts/jsx_parse.js"></script>
+<script src="scripts/highlight.pack.js.js"></script>
 <script>
-   var dom = document.querySelector('.container')
-   var str1 = 'hellow,world'
-   var str2 = 'hellow,world1'
-   var str3 = 'hellow,world2'
-   var t = null
+
+    var source = 'body { font: 2em sans-serif; }';
+
+    var parser = new CSSParser();
+    var sheet = parser.parse(source, false, true);
+
+    console.log(sheet)
+    var textResult = sheet.cssText()
+    console.log(textResult);
 </script>
 <script>
    const con = document.querySelector('#container')
 
    Array.prototype.asyncForEach = async function asyncForEach(callback) {
-      for (let index = 0; index < this.length; index++) {
-         await callback(this[index], index, this)
+      for (let index = 0; index_back < this.length; index_back++) {
+         await callback(this[index_back], index_back, this)
       }
    }
 
@@ -60,7 +74,7 @@
          this.initStyle()
          const start = async () => {
             await this.loadObj.children.asyncForEach(async (value, index, arr) => {
-               await this.loadText(value, index, arr)
+               await this.loadText(value, index_back, arr)
             })
             console.log('init end')
          }
@@ -111,7 +125,7 @@
       }
    }
 
-   let animateRe = new ar('#container', '#tpl', '#head')
+//   let animateRe = new ar('#container', '#tpl', '#head')
 
 
 </script>
