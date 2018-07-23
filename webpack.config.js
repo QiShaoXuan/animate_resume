@@ -12,7 +12,7 @@ module.exports = {
     ],
     //output为输出 path代表路径 filename代表文件名称
     output: {
-        path: path.join(__dirname, './doc'),
+        path: path.join(__dirname, './docs'),
         filename: 'bundle.[hash:8].js',
         chunkFilename: '[name].[hash:8].js'
     },
