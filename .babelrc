@@ -3,6 +3,12 @@
     "env"
   ],
   "plugins": [
-    "transform-runtime"
+    "transform-runtime",
+    ["prismjs", {
+      "languages": ["css"],
+      "plugins": [],
+      "theme": "twilight",
+      "css": false
+    }]
   ]
 }

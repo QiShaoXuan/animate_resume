@@ -1,29 +1,19 @@
 import indexCss from './styles/index.scss'
-import ar from "./scripts/AR"
-import startAnimate from './scripts/startAnimate'
-import {code1, code2} from "./load/load";
 
-var startCode = `// magic don\`t touch`
+import loadStyle from "./scripts/loadStyle"
+import loadMd from './scripts/loadMd'
 
-let rightFont = new ar({
-   language: 'css',
-   containerName: '#style-editor',
-   content: code1
-})
-// let rightFont2 = new ar({
-//    language: 'css',
-//    containerName: '#right-container',
-//    content: code2,
-//    rewrite: false
-// })
+import {style1, style2} from "./load/style"
+import {resume} from './load/resume'
 
-// let comma = /\D[\,]\s$/;
-// let endOfBlock = /[^\/]\n\n$/;
-
-// startAnimate('#style-editor',startCode)
-//     .then(rightFont.load.bind(rightFont))
-// .then(rightFont2.load.bind(rightFont2))
-
-rightFont.load()
+loadStyle({
+  containerName: '#style-editor',
+  content: style1
+}).then(() => loadMd({
+    containerName:'#resume-content',
+    content:resume}))
+  .then(() => {
+    console.log('down')
+  })
 
 // style-editor

@@ -1,4 +1,4 @@
-export const code1 = `/**
+export const style1 = `/**
  *
  * Hey. My name's qishaoxuan. I'm a web developer.
  *
@@ -27,7 +27,7 @@ html {
  * Hold on...
  */
 
-pre, a {
+pre {
   color: #ffffff;
 }
 
@@ -40,6 +40,7 @@ pre, a {
  */
 
 pre:not(:empty) {
+  max-height: 94%;
   overflow: auto;
   background: rgb(48, 48, 48);
   border: 1px solid #ccc;
@@ -54,7 +55,8 @@ pre:not(:empty) {
 #style-editor {
   transform: translateX(95%);
   position: absolute;
-  max-height: 94%;
+  left: 0;
+  top: 0;
 }
 
 /**
@@ -67,8 +69,8 @@ pre:not(:empty) {
 .selector      { color: #D7BA7D; }
 .keyword       { color: #569CD6; }
 .property      { color: #569CD6; }
-.function      { color: #DCDCDC; }
-.punctuation   { color: #999999; }
+.function      { color: #C366A3; }
+.punctuation   { color: #FFCF00; }
 
 /**
  * It\`s time to get a little perspective.
@@ -94,13 +96,7 @@ body {
 }
 `
 
-export const code2 = `
-
-pre:not(#style-text) {
-  -webkit-transform: rotateY(10deg);
-  -webkit-transform-origin: left;
-}
-
+export const style2 = `
 
 /**
  * That markdown on the left doesn't look great. Let's render it.
