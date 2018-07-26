@@ -20,6 +20,7 @@ export const code1 = `/**
 
 html {
   background: rgb(63, 82, 99);
+  font-size: 16px;
 }
 
 /***
