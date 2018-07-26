@@ -1,8 +1,11 @@
-@import "vs2015.css";
+@import "prism.css";
+
 html,body{
   height:100%;
+  font-size: 20px;
 }
 *{
   margin:0 ;
   padding:0;
+  box-sizing: content-box;
 }
