@@ -30,15 +30,22 @@ module.exports = {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     use: [{
-                        loader: "css-loader?modules&localIdentName=[local]-[hash:base64:5]"
+                        loader: "css-loader"
                     }, {
                         loader: "sass-loader"
                     }],
-                    // use: ['css-loader', 'postcss-loader', 'less-loader'],
-                    // 在开发环境使用 style-loader
                     fallback: "style-loader"
                 })
             },
+           {
+              test: /\.css$/,
+              use: ExtractTextPlugin.extract({
+                 use: [{
+                    loader: "css-loader"
+                 }],
+                 fallback: "style-loader"
+              })
+           },
             {
                 test: /\.(png|jpg|gif)$/,
                 use: [{
