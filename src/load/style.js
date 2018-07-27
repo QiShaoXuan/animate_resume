@@ -15,39 +15,39 @@ export const style1 = `/**
  * It seems to do noting. But you'll see.
  *
  * Black on white is really boring,
- * change them first.
+ * change threm first.
  */
 
 html {
   background: rgb(63, 82, 99);
-  font-size: 16px;
+  font-size: 10px;
 }
 
 /***
  * Hold on...
  */
 
-pre {
+pre, a {
   color: #ffffff;
 }
 
 /**
  * That's better. 
  *
- * Working in this big empty space is tough.
+ * Working in this big rempty space is tough.
  *
  * I'm going to make a nice area to show the content.
  */
 
 pre:not(:empty) {
-  max-height: 94%;
+  max-height: 92%;
+  font-size: 1.2rem;
   overflow: auto;
   background: rgb(48, 48, 48);
   border: 1px solid #ccc;
   width: 49%;
   /*font-family: monospace;*/
-  padding: 10px 10px 20px;
-  box-shadow: -4x 2px 0 rgba(0,0,0,0.3);
+  padding: 1rem 1rem 2rem;
   white-space: pre-wrap;
   outline: 0;
 }
@@ -55,8 +55,8 @@ pre:not(:empty) {
 #style-editor {
   transform: translateX(95%);
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 1rem;
+  top: 1rem;
 }
 
 /**
@@ -77,7 +77,7 @@ pre:not(:empty) {
  */
 
 body {
-  perspective: 1000px;
+  perspective: 100rem;
 }
 
 #style-editor {
@@ -86,7 +86,7 @@ body {
 }
 
 /**
- *  * Okey, it is time to show the resume.
+ * Okey, it is time to show the resume.
  * You must not just come to see the pretty colors.
  */
  
@@ -96,116 +96,40 @@ body {
 }
 `
 
-export const style2 = `
-
-/**
+export const style2 = `/**
  * That markdown on the left doesn't look great. Let's render it.
  */
 
-#work-text.flipped {
-  -webkit-transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg);
+#resume-content{
+  padding: 2rem;
+  font-size: 1.4rem;
 }
-
-#work-text .md {
-  -webkit-transform: rotateY(190deg) rotateZ(180deg);
-  margin-top: 800px;
-}
-
-/**
- * Alright. We're ready.
- *
- * 3...
- * 2...
- * 1...
- *
- * .
- * ....faked you out.
- *
- * Okay here we go!
- *
- */
-
-
-/**
- * The text could use some tweaks.
- */
-
-.md {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-}
-
-.md h1, .md h2, .md h3, .md h4, .md h5, .md h6 {
+#resume-content h1{
   display: inline-block;
-  color: #ddd;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
+  border-bottom: 1px solid;
+  margin: 2.5rem 0 1rem;
+  font-size: 2.6rem;
 }
-
-.md li {
-  margin: 5px 0;
+#resume-content a{
+  color: #ffffff;
+  text-decoration: none;
 }
-
-.md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md ul, .md p {
-  margin: 0px;
+#resume-content ul> li{
+  margin-bottom: .3rem;
 }
-
-/**
- * That's better.
- *
- * If you want to contact me, use the PGP keys on the left.
- *
- * You know, if you're into that sort of thing.
- */
-
-#pgp-text {
-  font-size: 12px;
-  color: #ada;
-}
-
-
-/**
- * We're almost done.
- */
-
- pre:hover{
-   box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
- }
-
- #skip-animation, #pause-resume {
-   display: none;
- }
-
-/**
- * I hope you enjoyed this.
- *
- * Thanks to Jake Albaugh, who was the first (that I know of) to do
- * a page like this. Some of the autotyping and syntax highlighting
- * code is based off his work.
- *
- * See more of Jake's work at http://codepen.io/jakealbaugh/
- */
-
-/**
- * By the way, you can edit this box. Try adding new CSS!
- *
- * For example,
- *
- * The property 'text-shadow' takes the parameters:
- * 'x', 'y', 'blur', 'color'.
- *
- * So if I wanted to mirror the values,
- * I could place a shadow 15px under it,
- * with a little blur for effect:
- */
-
-.value {
-  color:hi;
-  text-shadow: 0px 15px 1px white;
+#resume-content ul> li::before{
+  content: '•';
+  margin-right: .5rem;
+  color: '#ffffff';
 }
 
 /**
- * Try it out! There's lots you can do.
- * Try playing with text sizes, shadows, animations, or just
- * break the page. I won't hold it against you.
+ * Okey, this is almost done.
+ *
+ * This page is inspired by http://strml.net/， which was what I met when I was a beginner of js.
+ *
+ * It is really surprise me, and now I can code it by my self.
+ *
+ * Ertainly，most of sentences is from that, my English is very poor~ after all.
+ * 
  */`
-

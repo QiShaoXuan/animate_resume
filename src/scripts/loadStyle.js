@@ -1,6 +1,7 @@
 import Prism from 'prismjs'
+import config from './config'
 
-export default function loadStyle(options = {
+export function loadStyle(options = {
   containerName: '',
   content: '',
   rewrite: true,
@@ -30,10 +31,13 @@ export default function loadStyle(options = {
           container.innerHTML = containerOriginContent + code
           styleContainer.innerText = str
 
-
-          setTimeout(() => {
-            start()
-          }, nextInterval)
+          if(config.pause){
+            return resolve()
+          }else{
+            setTimeout(() => {
+              start()
+            }, nextInterval)
+          }
 
         } else {
           return resolve()
@@ -43,6 +47,25 @@ export default function loadStyle(options = {
 
     start()
   })
+}
+
+export function skipStyle(options = {
+  containerName: '',
+  content: '',
+  rewrite:true,
+}) {
+  let styleStr = options.content
+  let container = document.querySelector(options.containerName)
+  let styleContainer = getStyleContainer()
+  let containerOriginContent = ''
+  let code = Prism.highlight(styleStr, Prism.languages.css)
+
+  if (!options.rewrite) {
+    containerOriginContent = container.innerHTML
+  }
+
+  container.innerHTML = containerOriginContent + code
+  styleContainer.innerText = styleStr
 }
 
 function setInterval(str, interval = 16) {

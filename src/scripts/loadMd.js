@@ -1,29 +1,48 @@
 import marked from 'marked'
+import config from './config'
 
-export default function loadMd(options = {
+export function loadMd(options = {
   containerName: '',
   content: '',
 }) {
   return new Promise(resolve => {
     let container = document.querySelector(options.containerName)
     let mdStr = options.content
-    let interval = 16
+    let interval = 50
     let num = 0
     let sum = mdStr.length
 
     const start = function () {
       setTimeout(() => {
         num += 1
+        let wordNow = mdStr.substring(num -1,num)
         if (num <= sum) {
-          container.innerHTML = marked(mdStr.substr(0,num))
-          start()
+          if(wordNow === '\n'){
+            container.innerHTML = marked(mdStr.substr(0,num))
+          }else{
+            container.innerHTML = container.innerHTML + wordNow
+          }
+          if(config.pause){
+            return resolve()
+          }else{
+            start()
+          }
         } else {
-          console.log('resolve')
           return resolve()
         }
-      }, interval)
+      }, 50)
     }
 
     start()
   })
+}
+
+export function skipMd(options = {
+  containerName: '',
+  content: '',
+}) {
+  let container = document.querySelector(options.containerName)
+  let mdStr = options.content
+
+  container.innerHTML = marked(mdStr)
 }
