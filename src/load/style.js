@@ -43,11 +43,11 @@ pre, a {
 
 pre:not(:empty) {
   ${config.isMobile?
-  `width: calc(100% - 2rem);
-  max-height: 46%;`
+  `max-height: 46%;
+  width: calc(100% - 2rem);`
   :
-  `width: 49%;
-  max-height: 92%;`}
+  `max-height: 92%;
+  width: 49%;`}
   font-size: 1.2rem;
   overflow: auto;
   background: rgb(48, 48, 48);
