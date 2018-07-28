@@ -1,3 +1,4 @@
+import config from '../scripts/config'
 export const style1 = `/**
  *
  * Hey. My name's qishaoxuan. I'm a web developer.
@@ -21,6 +22,7 @@ export const style1 = `/**
 html {
   background: rgb(63, 82, 99);
   font-size: 10px;
+  overflow: hidden;
 }
 
 /***
@@ -40,20 +42,23 @@ pre, a {
  */
 
 pre:not(:empty) {
-  max-height: 92%;
+  ${config.isMobile?
+  `width: calc(100% - 2rem);
+  max-height: 46%;`
+  :
+  `width: 49%;
+  max-height: 92%;`}
   font-size: 1.2rem;
   overflow: auto;
   background: rgb(48, 48, 48);
   border: 1px solid #ccc;
-  width: 49%;
-  /*font-family: monospace;*/
   padding: 1rem 1rem 2rem;
   white-space: pre-wrap;
   outline: 0;
 }
 
 #style-editor {
-  transform: translateX(95%);
+  ${config.isMobile?'':'transform: translateX(95%);'}
   position: absolute;
   left: 1rem;
   top: 1rem;
@@ -81,7 +86,7 @@ body {
 }
 
 #style-editor {
-  transform: translateX(98.5%) rotateY(-10deg);
+  ${config.isMobile?'transform: rotateX(-10deg);':'transform: translateX(98.5%) rotateY(-10deg);'}
   transform-origin: right;
 }
 
@@ -91,8 +96,15 @@ body {
  */
  
  #resume-content {
+ ${config.isMobile?`position: absolute;
+ left: 1rem;
+ bottom: 3rem;
+ height: 48%;`
+  :`position: absolute;
+  left: 1rem;
+  top: 1rem;
   transform: rotateY(10deg);
-  transform-origin: left;
+  transform-origin: left;`} 
 }
 `
 

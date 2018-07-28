@@ -139,11 +139,46 @@ pre[class*="language-"] {
 }
 
 html, body {
-  height: 100%; }
+  height: 100%;
+  font-size: 10px; }
+
+body {
+  padding: 1rem; }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box; }
+  box-sizing: border-box; }
 
-/*# sourceMappingURL=index.771a3344.css.map*/
+.style-container, .resume-container {
+  height: 100%; }
+
+#resume-content {
+  white-space: normal; }
+  #resume-content ul, #resume-content ol {
+    list-style: none; }
+  #resume-content h1:first-of-type {
+    margin-top: 0; }
+
+.bottom-container {
+  width: 100%;
+  height: 4vh;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: 1.4rem; }
+  .bottom-container a {
+    margin-right: 1rem; }
+
+@media (max-width: 750px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: hidden; }
+  pre {
+    max-height: 100%; } }
+
+/*# sourceMappingURL=index.f2353307.css.map*/

@@ -5,7 +5,7 @@ export function loadMd(options = {
   containerName: '',
   content: '',
 }) {
-  return new Promise(resolve => {
+  return new Promise((resolve,reject) => {
     let container = document.querySelector(options.containerName)
     let mdStr = options.content
     let interval = 50
@@ -16,6 +16,9 @@ export function loadMd(options = {
       setTimeout(() => {
         num += 1
         let wordNow = mdStr.substring(num -1,num)
+
+        container.scrollTop = 100000
+
         if (num <= sum) {
           if(wordNow === '\n'){
             container.innerHTML = marked(mdStr.substr(0,num))
@@ -23,7 +26,8 @@ export function loadMd(options = {
             container.innerHTML = container.innerHTML + wordNow
           }
           if(config.pause){
-            return resolve()
+            container.scrollTop = 0
+            return reject()
           }else{
             start()
           }

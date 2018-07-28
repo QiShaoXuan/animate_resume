@@ -6,14 +6,14 @@ export function loadStyle(options = {
   content: '',
   rewrite: true,
 }) {
-  return new Promise(resolve => {
+  return new Promise((resolve,reject) => {
     let styleStr = options.content
     let container = document.querySelector(options.containerName)
     let num = 0
     let sum = styleStr.length
     let containerOriginContent = ''
     let styleContainer = getStyleContainer()
-    let interval = 16
+    let interval = 1
     if (!options.rewrite) {
       containerOriginContent = container.innerHTML
     }
@@ -32,7 +32,7 @@ export function loadStyle(options = {
           styleContainer.innerText = str
 
           if(config.pause){
-            return resolve()
+            return reject()
           }else{
             setTimeout(() => {
               start()
