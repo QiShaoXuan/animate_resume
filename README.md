@@ -1,10 +1,10 @@
 # 动画简历(animate_resume)
 
-demo
+## view online
 
 https://qishaoxuan.github.io/animate_resume/
 
-# 本地查看
+## 本地查看
 ```bash
   git clone git@github.com:QiShaoXuan/animate_resume.git
   cd animate_resume
@@ -12,10 +12,10 @@ https://qishaoxuan.github.io/animate_resume/
   npm run dev
 ```
 
-# 修改
+## 修改
 style和resume在`src/load/`下的对应js中
 
-# 打包
+## 打包
 ```bash
   npm run build
 ```
