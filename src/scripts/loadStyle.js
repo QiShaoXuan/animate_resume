@@ -13,7 +13,7 @@ export function loadStyle(options = {
     let sum = styleStr.length
     let containerOriginContent = ''
     let styleContainer = getStyleContainer()
-    let interval = 1
+    let interval = 16
     if (!options.rewrite) {
       containerOriginContent = container.innerHTML
     }

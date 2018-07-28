@@ -20,7 +20,7 @@ export const style1 = `/**
  */
 
 html {
-  background: rgb(63, 82, 99);
+  background: #216583;
   font-size: 10px;
   overflow: hidden;
 }

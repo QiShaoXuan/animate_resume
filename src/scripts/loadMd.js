@@ -26,12 +26,12 @@ export function loadMd(options = {
             container.innerHTML = container.innerHTML + wordNow
           }
           if(config.pause){
-            container.scrollTop = 0
             return reject()
           }else{
             start()
           }
         } else {
+          container.scrollTop = 0
           return resolve()
         }
       }, 50)
