@@ -80,7 +80,7 @@ module.exports = {
         }
     },
     devServer: {
-        contentBase: path.join(__dirname, 'bundle'),  //启动路径
+        contentBase: path.join(__dirname, 'docs'),  //启动路径
         host: 'localhost',  //域名
         port: 8018,  //端口号
     },
