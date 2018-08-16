@@ -1,13 +1,13 @@
-import indexCss from './styles/index.scss'
+// import indexCss from '../styles/index.scss'
 
-import config from './scripts/config'
-import {loadStyle, skipStyle} from "./scripts/loadStyle"
-import {loadMd, skipMd} from './scripts/loadMd'
-import endAnimate from './scripts/endAnimate'
+import config from './components/config'
+import {loadStyle, skipStyle} from "./components/loadStyle"
+import {loadMd, skipMd} from './components/loadMd'
+import endAnimate from './components/endAnimate'
 
 
-import {style1, style2} from "./load/style"
-import {resume} from './load/resume'
+import {style1, style2} from "../load/style"
+import {resume} from '../load/resume'
 
 
 let skipBtn = document.querySelector('#skip-btn')

@@ -1,4 +1,4 @@
-import config from '../scripts/config'
+import config from '../scripts/components/config'
 export const style1 = `/**
  *
  * Hey. My name's qishaoxuan. I'm a web developer.

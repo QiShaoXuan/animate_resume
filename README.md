@@ -10,8 +10,7 @@ https://qishaoxuan.github.io/animate_resume/
   cd animate_resume
   npm install
   npm run dev
-
-  localhost:8018/
+  
 ```
 
 ## 修改
