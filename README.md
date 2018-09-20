@@ -1,8 +1,16 @@
 # 动画简历(animate_resume)
 
-## view online
+## 在线观看 view online
 
 https://qishaoxuan.github.io/animate_resume/
+
+## 关于 about
+
+- 文字加载基于ES6 + 异步promise封装
+- 字体样式参考prismjs
+- prismjs + markedjs 处理代码转换
+- 移动端使用了better-scroll优化体验
+- 打包使用了gulp + rollup
 
 ## 本地查看
 ```bash
@@ -10,7 +18,6 @@ https://qishaoxuan.github.io/animate_resume/
   cd animate_resume
   npm install
   npm run dev
-  
 ```
 
 ## 修改

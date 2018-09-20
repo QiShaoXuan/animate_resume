@@ -34,7 +34,7 @@ pre, a {
 }
 
 /**
- * That's better. 
+ * That's better.
  *
  * Working in this big rempty space is tough.
  *
@@ -48,7 +48,7 @@ pre:not(:empty) {
   :
   `max-height: 92%;
   width: 49%;`}
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   overflow: auto;
   background: rgb(48, 48, 48);
   border: 1px solid #ccc;
@@ -94,7 +94,7 @@ body {
  * Okey, it is time to show the resume.
  * You must not just come to see the pretty colors.
  */
- 
+
  #resume-content {
  ${config.isMobile?`position: absolute;
  left: 1rem;
@@ -104,7 +104,7 @@ body {
   left: 1rem;
   top: 1rem;
   transform: rotateY(10deg);
-  transform-origin: left;`} 
+  transform-origin: left;`}
 }
 `
 
@@ -143,5 +143,5 @@ export const style2 = `/**
  * It is really surprise me, and now I can code it by my self.
  *
  * Ertainly，most of sentences is from that, my English is very poor~ after all.
- * 
+ *
  */`
