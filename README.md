@@ -6,11 +6,11 @@ https://qishaoxuan.github.io/animate_resume/
 
 ## 关于 about
 
-- 文字加载基于ES6 + 异步promise封装
-- 字体样式参考prismjs
+- 文字加载基于 ES6 + 异步promise封装
+- 字体样式参考 prismjs
 - prismjs + markedjs 处理代码转换
-- 移动端使用了better-scroll优化体验
-- 打包使用了gulp + rollup
+- 移动端使用了 better-scroll 优化体验
+- 打包使用了 gulp + rollup
 
 ## 本地查看
 ```bash
@@ -21,7 +21,7 @@ https://qishaoxuan.github.io/animate_resume/
 ```
 
 ## 修改
-style和resume在`src/load/`下的对应js中
+style 和 resume 在 `src/load/` 下的对应js中
 
 ## 打包
 ```bash
