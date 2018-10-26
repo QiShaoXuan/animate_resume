@@ -1,4 +1,4 @@
-# 动画简历(animate_resume)
+# 动态简历(animate_resume)
 
 ## 在线观看 view online
 
