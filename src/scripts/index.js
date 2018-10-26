@@ -5,7 +5,6 @@ import {loadStyle, skipStyle} from "./components/loadStyle"
 import {loadMd, skipMd} from './components/loadMd'
 import endAnimate from './components/endAnimate'
 
-
 import {style1, style2} from "../load/style"
 import {resume} from '../load/resume'
 
@@ -37,9 +36,19 @@ loadStyle({
   .catch(() => {
     skipBtn.style.display = 'none'
 
-    skipStyle({containerName: '#style-editor', content: style1})
-    skipMd({containerName: '#resume-content', content: resume})
-    skipStyle({containerName: '#style-editor', content: style2, write: false,})
+    skipStyle({
+      containerName: '#style-editor',
+      content: style1
+    })
+    skipMd({
+      containerName: '#resume-content',
+      content: resume
+    })
+    skipStyle({
+      containerName: '#style-editor',
+      content: style2,
+      write: false,
+    })
     if (config.isMobile) {
       endAnimate()
     }
