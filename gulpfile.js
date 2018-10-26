@@ -81,16 +81,21 @@ gulp.task('html', function () {
     .pipe(browserSync.reload({stream: true}));
 })
 
+gulp.task('copy', function () {
+  gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.svg'])
+    .pipe(gulp.dest('docs/images'))
+})
+
 gulp.task('delete', function (cb) {
   return del(['docs/*'], cb);
 })
 
 gulp.task('build',['delete'],function () {
-  return gulp.start('html', 'sass', 'rollup')
+  return gulp.start('html', 'sass', 'rollup','copy')
 })
 
 gulp.task('dev', ['delete'], function () {
-  gulp.start('html', 'sass', 'rollup')
+  gulp.start('html', 'sass', 'rollup','copy')
   browserSync.init({
     port: (new Date).getFullYear(),
     server: {
@@ -100,4 +105,5 @@ gulp.task('dev', ['delete'], function () {
   gulp.watch('src/**/*.js', ['rollup']);
   gulp.watch('src/**/*.scss', ['sass']);
   gulp.watch('src/index.html', ['html']);
+  gulp.watch(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.svg'], ['copy']);
 })
