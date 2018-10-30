@@ -13,19 +13,12 @@ Front End Engineer
 
 # Projects
 
-* www.gigacre.com
-* [pretend to be a project](pretend.to.be.a.url)
-* [pretend to be a project](pretend.to.be.a.URL)
-* [pretend to be a project](pretend.to.be.a.url)
-* [pretend to be a project](pretend.to.be.a.url)
-* [pretend to be a project](pretend.to.be.a.url)
+* [www.gigacre.com](http://www.gigacre.com/)
 
-# Open Source
+# My Source
 
 * [vue_teris](https://qishaoxuan.github.io/vue_tetris/)
-* [pretend to have many open sources](pretend.to.be.a.url)
-* [pretend to have many open sources](pretend.to.be.a.url)
-* [pretend to have many open sources](pretend.to.be.a.url)
-* [pretend to have many open sources](pretend.to.be.a.url)
-
+* [CSS Tricks](https://qishaoxuan.github.io/css_tricks/)
+* [JS Tricks](https://qishaoxuan.github.io/js_tricks/)
+* [Bolg](https://qishaoxuan.github.io/blog/)
 `
