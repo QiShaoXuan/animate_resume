@@ -54,3 +54,21 @@ loadStyle({
     }
   })
 
+//
+// const r = new resume(container,{
+//   content:[
+//     {
+//       content:'',
+//       type:'',
+//
+//     }
+//   ],
+//
+// })
+//  r.animate()
+//
+// r.skip()
+
+
+
+

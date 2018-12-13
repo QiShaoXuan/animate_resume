@@ -74,6 +74,7 @@ function setInterval(str, interval = 16) {
   if (/[\.\?\!]\s$/.test(str)) return interval * 60
   return 0
 }
+
 function getStyleContainer() {
   let newStyle = document.createElement('style')
   let head = document.querySelector('head')
