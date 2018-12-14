@@ -12,3 +12,21 @@
 2. 使用 typescript 
 3. 支持 scss 
 4. css, js, html 压缩
+
+
+```js
+const r = new resume(container,{
+  content:[
+    {
+      content:'',
+      type:'',
+
+    }
+  ],
+
+})
+
+r.animate()
+
+r.skip()
+```

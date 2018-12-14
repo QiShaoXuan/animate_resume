@@ -50,3 +50,5 @@ export function skipMd(options = {
 
   container.innerHTML = marked(mdStr)
 }
+
+
